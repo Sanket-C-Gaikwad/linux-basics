@@ -1,5 +1,15 @@
 | Command | Purpose | Detailed Examples |
 |---------|---------|-------------------|
+| `ls` | Lists the contents of a directory. | `ls` - Lists files in the current directory.<br>`ls -l` - Lists files with detailed information.<br>`ls -a` - Lists all files, including hidden ones. |
+| `cd` | Changes the current directory. | `cd /home` - Changes to the `/home` directory.<br>`cd ..` - Goes up one directory level.<br>`cd` - Goes to the home directory. |
+| `cp` | Copies files or directories. | `cp file1 file2` - Copies `file1` to `file2`.<br>`cp -r dir1 dir2` - Recursively copies `dir1` to `dir2`. |
+| `mv` | Moves or renames files or directories. | `mv file1 file2` - Renames or moves `file1` to `file2`.<br>`mv dir1 dir2` - Moves `dir1` to `dir2` (or renames if on the same directory level). |
+| `rm` | Removes files or directories. | `rm file` - Removes `file`.<br>`rm -r dir` - Recursively removes `dir` and its contents. |
+| `mkdir` | Creates a new directory. | `mkdir newdir` - Creates a directory named `newdir`.<br>`mkdir -p path/to/dir` - Creates intermediate directories as required. |
+| `cat` | Concatenates and displays file content. | `cat file1` - Displays the content of `file1`.<br>`cat file1 file2 > file3` - Concatenates `file1` and `file2` into `file3`. |
+| `echo` | Displays a line of text/string. | `echo "Hello World"` - Prints "Hello World".<br>`echo $HOME` - Prints the value of the HOME environment variable. |
+| `grep` | Searches for patterns in text. | `grep "pattern" file` - Searches for "pattern" in `file`.<br>`grep -r "pattern" dir` - Recursively searches for "pattern" in `dir`. |
+| `find` | Searches for files in a directory hierarchy. | `find / -name file.txt` - Finds all `file.txt` files starting from root.<br>`find . -type f -name "*.txt"` - Finds all `.txt` files in the current directory. |
 | touch | Creates an empty file or updates its timestamp. | `touch newfile.txt` - Creates a new file.<br>`touch -a file.txt` - Updates the access time only. |
 | chmod | Changes the file's mode (permissions). | `chmod 755 script.sh` - Sets read, write, execute permissions for the owner, read and execute for others.<br>`chmod +x script.sh` - Adds execute permission. |
 | chown | Changes the file or directory's ownership. | `chown user:group file.txt` - Changes ownership to user and group.<br>`chown user file.txt` - Changes file owner to user. |
