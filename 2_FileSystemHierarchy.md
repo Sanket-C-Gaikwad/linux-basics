@@ -4,6 +4,9 @@ apt install tree -y
 tree -L 1 /
 ```
 
+[Linux Directory Structure Explained]([URL](https://blog.learncodeonline.in/linux-directory-structure-explained))
+
+
   
 
 
