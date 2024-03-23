@@ -1,8 +1,8 @@
 - To view tree structure use:
-'''
+```
 apt install tree -y
 tree -L 1 /
-'''
+```
 
   
 
