@@ -1,3 +1,12 @@
+- To view tree structure use:
+'''
+apt install tree -y
+tree -L 1 /
+'''
+
+  
+
+
 | Directory | Purpose |
 |-----------|---------|
 | `/`       | The root directory is the top-level of the file system hierarchy. Everything on the system is under this directory. |
