@@ -74,7 +74,9 @@ chmod a=rw demo_file
 ```
 
 > Remove all permissions:
-```chmod go= demo_file```
+```
+chmod go= demo_file
+```
 
 - Numeric Method
 ```
@@ -100,8 +102,16 @@ chmod [OPTIONS] NUMBER FILE/DIR...
 
 - Examples:
 The `chmod` command can be used with these numbers to set file permissions. For example:
+
 - `chmod 755 FILE/DIR`: Sets the permissions to `rwx` for the owner, and `r-x` for both the group and others.
 - `chmod 644 FILE/DIR`: Sets the permissions to `rw-` for the owner, and `r--` for both the group and others.
 
+> Use stat command to view the existing permissions of a file or directory in numeric form:
+```stat -c %a demo_file```
 
+-  Reference file Method
+We can use the --reference=ref_file option to set the file’s permissions to be same as the specified reference file (ref_file).
+```
+chmod --reference=demo_file demo_file_2
+```
 
