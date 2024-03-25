@@ -40,10 +40,52 @@ chmod [OPTIONS] [ugoa…][-+=]perms…[,…] FILE/DIR...
 | `FILE/DIR`| The target file or directory to change permissions for. |
 
 
-- Example:
+- Examples:
 
 > To grant the user full permissions, the group read and execute permissions, and remove all permissions from others for `file.txt`:
-
 ```chmod u+rwx,g+rx,o-rwx file.txt```
+> To set read-only permissions for everyone for file.txt:
+```chmod a=r file.txt```
+> Give the owner of the demo_file full permissions (read, write and execute)
+```chmod u=rwx demo_file```
+> Give the write permission for group members:
+```chmod g+w demo_file```
+> Recursively remove the write permission for group users:
+```chmod -R g-w demo_file```
+> Give execute permission to all:
+```
+chmod a+x demo_file
+chmod a=rw demo_file
+```
+> Remove all permissions:
+```chmod go= demo_file```
+
+- Numeric Method
+| Number | Permission | Description |
+|--------|------------|-------------|
+| 7      | rwx        | Read, write, and execute |
+| 6      | rw-        | Read and write |
+| 5      | r-x        | Read and execute |
+| 4      | r--        | Read only |
+| 3      | -wx        | Write and execute |
+| 2      | -w-        | Write only |
+| 1      | --x        | Execute only |
+| 0      | ---        | No permission |
+
+### How to Use
+
+The `chmod` command can be used with these numbers to set file permissions. For example:
+
+- `chmod 755 FILE/DIR`: Sets the permissions to `rwx` for the owner, and `r-x` for both the group and others.
+- `chmod 644 FILE/DIR`: Sets the permissions to `rw-` for the owner, and `r--` for both the group and others.
+
+### Command Structure:
+
+| Component  | Meaning |
+|------------|---------|
+| `OPTIONS`  | Optional flags to alter the behavior of `chmod`. For example, `-R` applies changes recursively. |
+| `NUMBER`   | A three-digit octal number where each digit represents permissions for the user, group, and others, respectively. |
+| `FILE/DIR` | The target file or directory to change permissions for. |
+
 
 
