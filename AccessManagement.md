@@ -43,19 +43,29 @@ chmod [OPTIONS] [ugoa…][-+=]perms…[,…] FILE/DIR...
 - Examples:
 
 > To grant the user full permissions, the group read and execute permissions, and remove all permissions from others for `file.txt`:
-```chmod u+rwx,g+rx,o-rwx file.txt```
+```
+chmod u+rwx,g+rx,o-rwx file.txt
+```
 
 > To set read-only permissions for everyone for file.txt:
-```chmod a=r file.txt```
+```
+chmod a=r file.txt
+```
 
 > Give the owner of the demo_file full permissions (read, write and execute)
-```chmod u=rwx demo_file```
+```
+chmod u=rwx demo_file
+```
 
 > Give the write permission for group members:
-```chmod g+w demo_file```
+```
+chmod g+w demo_file
+```
 
 > Recursively remove the write permission for group users:
-```chmod -R g-w demo_file```
+```
+chmod -R g-w demo_file
+```
 
 > Give execute permission to all:
 ```
@@ -67,6 +77,15 @@ chmod a=rw demo_file
 ```chmod go= demo_file```
 
 - Numeric Method
+```
+chmod [OPTIONS] NUMBER FILE/DIR...
+
+```
+| Component  | Meaning |
+|------------|---------|
+| `OPTIONS`  | Optional flags to alter the behavior of `chmod`. For example, `-R` applies changes recursively. |
+| `NUMBER`   | A three-digit octal number where each digit represents permissions for the user, group, and others, respectively. |
+| `FILE/DIR` | The target file or directory to change permissions for. |
 
 | Number | Permission | Description |
 |--------|------------|-------------|
@@ -81,17 +100,8 @@ chmod a=rw demo_file
 
 - Examples:
 The `chmod` command can be used with these numbers to set file permissions. For example:
-
 - `chmod 755 FILE/DIR`: Sets the permissions to `rwx` for the owner, and `r-x` for both the group and others.
 - `chmod 644 FILE/DIR`: Sets the permissions to `rw-` for the owner, and `r--` for both the group and others.
-
-### Command Structure:
-
-| Component  | Meaning |
-|------------|---------|
-| `OPTIONS`  | Optional flags to alter the behavior of `chmod`. For example, `-R` applies changes recursively. |
-| `NUMBER`   | A three-digit octal number where each digit represents permissions for the user, group, and others, respectively. |
-| `FILE/DIR` | The target file or directory to change permissions for. |
 
 
 
