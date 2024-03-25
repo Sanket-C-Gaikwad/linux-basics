@@ -16,7 +16,7 @@ drwxr-xr-x 5 sanket sanket 4096 Oct 21 10:28 sanket.gaikwad1
 | Column | Meaning |
 |--------|---------|
 | 1 | File type and permissions: A string of 10 characters where the first character represents the file type (`-` for a regular file, `d` for a directory, `l` for a symbolic link, etc.). The following nine characters are grouped in threes, representing the read (`r`), write (`w`), and execute (`x`) permissions for the owner, group, and others, respectively. |
-| 2 | Number of links: The number of hard links to the file. For directories, this represents the number of entries within. |
+| 2 | Number of links: The number of hard links to the file. For directories, this represents the number of entries within. ``` stat dir_name```|
 | 3 | Owner: The username of the individual or entity that owns the file. |
 | 4 | Group: The name of the group associated with the file. |
 | 5 | Size: The file size in bytes. |
