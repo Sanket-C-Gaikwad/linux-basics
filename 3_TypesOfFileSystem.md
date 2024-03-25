@@ -1,5 +1,11 @@
 ## [Linux File System Types](https://blog.learncodeonline.in/understanding-linux-file-systems-ext4-xfs-btrfs)
 
+- To check the file system use:
+```
+lsblk -f
+```
+
+
 - **ext4**: The fourth extended filesystem (ext4) is widely used in Linux and known for its stability and support for large file sizes and volumes. It features journaling, which helps protect the integrity of the file system structure and speeds up crash recovery.
 
 - **xfs**: XFS is designed for high performance and scalability, optimized for large data volumes and parallel I/O operations. It's often the choice for data-heavy applications and databases.
