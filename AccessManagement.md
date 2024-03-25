@@ -1,4 +1,4 @@
-## Manage File and Directory Permissions
+## 1. Manage File and Directory Permissions
 
 - To view the file and directory permissions:
 ```
@@ -24,7 +24,7 @@ drwxr-xr-x 5 sanket sanket 4096 Oct 21 10:28 sanket.gaikwad1
 | 9 | Name: The name of the file or directory. For symbolic links, it also shows the link target. |
 
 
-## How do I Change Permissions?
+## 2. How do I Change Permissions?
 
 ```
 chmod [OPTIONS] [ugoa…][-+=]perms…[,…] FILE/DIR...
@@ -40,10 +40,10 @@ chmod [OPTIONS] [ugoa…][-+=]perms…[,…] FILE/DIR...
 | `FILE/DIR`| The target file or directory to change permissions for. |
 
 
-- Example: To grant the user full permissions, the group read and execute permissions, and remove all permissions from others for `file.txt`:
+- Example:
 
-  ```markdown
-  | Command | Description |
-  |---------|-------------|
-  | `chmod u+rwx,g+rx,o-rwx file.txt` | User gets rwx, group gets rx, others get none. |
+> To grant the user full permissions, the group read and execute permissions, and remove all permissions from others for `file.txt`:
+
+```chmod u+rwx,g+rx,o-rwx file.txt```
+
 
