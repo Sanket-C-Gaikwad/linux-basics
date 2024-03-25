@@ -1,4 +1,4 @@
-##Manage File and Directory Permissions
+## Manage File and Directory Permissions
 
 - To view the file and directory permissions:
 ```
@@ -22,3 +22,28 @@ drwxr-xr-x 5 sanket sanket 4096 Oct 21 10:28 sanket.gaikwad1
 | 5 | Size: The file size in bytes. |
 | 6, 7, 8 | Date and Time: The last modification date and time of the file, typically shown as `Month Day Time`. |
 | 9 | Name: The name of the file or directory. For symbolic links, it also shows the link target. |
+
+
+## How do I Change Permissions?
+
+```
+chmod [OPTIONS] [ugoa…][-+=]perms…[,…] FILE/DIR...
+```
+
+| Component | Meaning |
+|-----------|---------|
+| `OPTIONS` | Optional flags to alter the behavior of `chmod`. For example, `-R` applies changes recursively. |
+| `ugoa`    | User classes the changes will apply to: `u` (user/owner), `g` (group), `o` (others), `a` (all). Omitting this applies changes to all by default. |
+| `-+=`     | Operators that define how permissions change: `+` adds, `-` removes, and `=` sets exactly. |
+| `perms`   | Specifies the permissions: `r` (read), `w` (write), `x` (execute). Can combine multiple permissions. |
+| `[,…]`    | Allows specifying multiple changes, separated by commas, each for different user classes. |
+| `FILE/DIR`| The target file or directory to change permissions for. |
+
+
+- Example: To grant the user full permissions, the group read and execute permissions, and remove all permissions from others for `file.txt`:
+
+  ```markdown
+  | Command | Description |
+  |---------|-------------|
+  | `chmod u+rwx,g+rx,o-rwx file.txt` | User gets rwx, group gets rx, others get none. |
+
