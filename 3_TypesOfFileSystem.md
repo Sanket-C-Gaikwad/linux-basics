@@ -15,5 +15,5 @@
 - **swap**: Not exactly a file system for storing files, but a special type used by Linux swap partitions. It is used for paging and swapping data from memory to disk.
 
 
-  ![Alt text](images/compare file system.png)
+  ![Alt text](images/filesystem.png)
 
