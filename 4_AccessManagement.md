@@ -181,4 +181,7 @@ chmod 2755 testfile.txt
 ls -l testfile.txt
 -rwxr-sr-x 1 root root 0 Mar 27 04:03 testfile.txt
 
+chmod 1755 testdir
+ls -ld testdir/
+drwxr-xr-t 2 root root 4096 Mar 27 04:03 testdir/
 ```
