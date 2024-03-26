@@ -115,3 +115,17 @@ We can use the --reference=ref_file option to set the file’s permissions to be
 chmod --reference=demo_file demo_file_2
 ```
 
+## 3. Special Permissions sets
+
+- setuid
+
+Setuid permission set allows a user to execute that file or program with the permission of the owner of that file. This setting elevates the privileges of the current user.
+
+check 'sudo' permisssions
+```
+ls -l /usr/bin/sudo
+-rwsr-xr-x 1 root root 149080 Jan 31  2020 /usr/bin/sudo
+
+chmod u+s demo_file
+```
+If the user who owns the file himself doesn't have execute permissions you will see a capital S instead of s. To change that you need to later assign execute permissions to owner.
