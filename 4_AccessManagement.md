@@ -129,3 +129,33 @@ ls -l /usr/bin/sudo
 chmod u+s demo_file
 ```
 If the user who owns the file himself doesn't have execute permissions you will see a capital S instead of s. To change that you need to later assign execute permissions to owner.
+
+- Setgid
+
+Setgid when set allows a process, when executed, to run as the group that owns the file.
+
+```
+ls -l /usr/bin/crontab
+-rwxr-sr-x 1 root crontab 39352 Nov 16  2017 /usr/bin/crontab
+
+chmod g+s demo_file_2
+
+```
+>  Setgid on a directory has a different effect:
+A directory that has ‘setgid’ on it will cause all files that are created in that directory to be owned by the group of the directory as opposed to the group of the owner.
+
+```
+groupadd test_grp
+
+chgrp test_grp sgid_test
+
+ls -ld sgid_test/
+`drwxr-xr-x 2 root test_grp 4096 Mar 26 08:33 sgid_test/`
+
+chmod g+s sgid_test/
+
+ls -ld sgid_test/
+`drwxr-sr-x 2 root test_grp 4096 Mar 26 08:33 sgid_test/`
+```
+
+
