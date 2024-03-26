@@ -158,4 +158,27 @@ ls -ld sgid_test/
 `drwxr-sr-x 2 root test_grp 4096 Mar 26 08:33 sgid_test/`
 ```
 
+- Sticky Bit
 
+This is one of the most important file permission type. When this is set on a directory, the files in that directory can only be removed by the owner.
+
+The best example of this is the /tmp directory. Any user can write to that but users cannot delete the files of other users.
+
+"When more than one user works on a project directory that time it becomes critical. To stop accidental deletions we apply sticky bit on the directories."
+
+```
+chmod o+t sticky_bit_test/
+```
+
+- For the special permissions, one can prepend these numbers with another number where 4 is setuid, 2 is setgid, and 1 represents the sticky bit.
+
+```
+chmod 4755 testfile.txt
+ls -l testfile.txt
+-rwsr-xr-x 1 root root 0 Mar 27 04:03 test.txt
+
+chmod 2755 testfile.txt
+ls -l testfile.txt
+-rwxr-sr-x 1 root root 0 Mar 27 04:03 testfile.txt
+
+```
