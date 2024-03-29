@@ -36,6 +36,9 @@ cat sources.list | more
 
 - code to see:
 ```
+> deb -> These repositories contain binaries or precompiled packages. These repositories are required for most users.
+> deb-src -> These repositories contain the source code of the packages. Useful for developers.
+
 cat sources.list | grep -v "^#" | grep -i main
 
 cat sources.list | grep -v "^#" | grep -i universe
@@ -46,7 +49,25 @@ cat sources.list | grep -v "^#" | grep -i multiverse
 
 ```
 
+## 4. How to add custom Repos to linux ubuntu:
 
+- Step 1 -> Import the public key used by the package management system
+- Step 2 -> Create a list file and add repository config for Jenkins
+- Step 3 -> Update the repositories Run the following update command which reload the database for local package on all the repositories.
+
+```
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+apt-get update
+
+OR
+
+> add repo
+add-apt-repository 'deb http://pkg.jenkins.io/debian-stable binary/'
+
+> remove repo
+add-apt-repository --remove 'deb http://pkg.jenkins.io/debian-stable binary/'
+```
 
 
 
