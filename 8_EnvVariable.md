@@ -22,8 +22,7 @@ set | grep variable_name
 - Setting non-persistent environment variables
 export tutorial_name=env_variables
 
-- Setting persistent environment variables
-- To set it for a single user, you need to edit the .bashrc file and add lines for each variable you wish to add in following format:
+- Setting persistent environment variables. To set it for a single user, you need to edit the .bashrc file and add lines for each variable you wish to add in following format:
 echo "export tutorial_name=env_variables" >> ~/.bashrc
 echo $tutorial_name
 logout
