@@ -2,9 +2,9 @@
 
 ```
 - A variable can have more than one value and will be separated by a colon:
-
+`
 variable_name=value_1:value_2
-
+`
 
 - Quotation marks will be used if the variable has values with spaces in between:
 
