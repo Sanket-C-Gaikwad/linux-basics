@@ -1,5 +1,5 @@
-## 1. What are Environment Variables?
-When you login to a Linux system a shell environment gets setup for the user logging in. Bash environment variables defines the environment it creates when it launches. The information they carries and applies is your username, locale, history file size, your default editor, and a lot of other things. They too are defined by a key:value pair as shell variables.
+## 1. What are environmental variables?
+When you log in to a Linux system a shell environment gets set up for the user logging in. Bash environment variables define the environment it creates when it launches. The information they carry and applies is your username, locale, history file size, default editor, and a lot of other things. They too are defined by a key:value pair as shell variables.
 
 ```
 - A variable can have more than one value and will be separated by a colon:
@@ -10,7 +10,7 @@ variable_name=value_1:value_2
 - Quotation marks will be used if the variable has values with spaces in between:
 variable_name="text value"
 
-- List all env variable:
+- List all env variables:
 env
 printenv
 
