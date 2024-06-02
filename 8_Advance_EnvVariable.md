@@ -39,10 +39,11 @@ sudo su - vagrant
 echo $tutorial_name
 
 - If you want to apply or make the environment active without logging out from the session run the following command.
+- here, the source is used to execute the .sh file it gives immediate effects and persistent changes for env variables.
 source /etc/profile.d/my_env_var.sh
 echo $tutorial_name
 
-- Unset an Environment Variable: This will permanently remove the variables exported or set via a terminal command. The variables which are stored in configuration files (.bashrc or individual .sh files in etc/profiles.d directory) will also be removed from the current shell session. However, they will be set again once you login back next.
+- Unset an Environment Variable: This will permanently remove the variables exported or set via a terminal command. The variables which are stored in configuration files (.bashrc or individual .sh files in etc/profiles.d directory) will also be removed from the current shell session. However, they will be set again once you log back in.
 unset variable_name
 ```
 
